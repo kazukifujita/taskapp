@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -29,18 +30,18 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JWG-df-wfZ" id="Qf6-yT-WTP">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BQw-PN-BeK">
-                                                    <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
+                                                    <rect key="frame" x="15" y="4" width="34" height="21"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xTI-5x-n6b">
-                                                    <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
+                                                    <rect key="frame" x="15" y="25" width="44" height="15"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -61,15 +62,97 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YJW-eW-gkt">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="O37-ki-Pb1"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="O37-ki-Pb1">
+                            <connections>
+                                <segue destination="xSH-8k-FA9" kind="show" id="hoT-NB-p6K"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="AAh-dP-yJU" id="PaG-VD-WrL"/>
+                        <segue destination="xSH-8k-FA9" kind="show" identifier="cellSegue" id="SH2-vk-Or5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1056.8" y="123.68815592203899"/>
+        </scene>
+        <!--Input View Controller-->
+        <scene sceneID="H7M-Y9-u9v">
+            <objects>
+                <viewController id="xSH-8k-FA9" customClass="InputViewController" customModule="taskapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dO1-os-Ac8"/>
+                        <viewControllerLayoutGuide type="bottom" id="nCj-g8-pru"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Us6-sm-xsk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイトル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HkS-qG-25P">
+                                <rect key="frame" x="16" y="74" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="osl-WE-eA8">
+                                <rect key="frame" x="16" y="105" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="内容" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R25-P4-gX2">
+                                <rect key="frame" x="16" y="145" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="avy-II-D1v">
+                                <rect key="frame" x="16" y="176" width="343" height="120"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="AZ3-QT-8Im"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="QdM-Fe-haQ">
+                                <rect key="frame" x="16" y="306" width="343" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="fXM-8B-ftD"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="514662366.665856">
+                                    <!--2017-04-23 17:46:06 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QdM-Fe-haQ" firstAttribute="top" secondItem="avy-II-D1v" secondAttribute="bottom" constant="10" id="EWq-t3-IPn"/>
+                            <constraint firstItem="R25-P4-gX2" firstAttribute="top" secondItem="osl-WE-eA8" secondAttribute="bottom" constant="10" id="GPN-om-iIc"/>
+                            <constraint firstItem="HkS-qG-25P" firstAttribute="leading" secondItem="Us6-sm-xsk" secondAttribute="leadingMargin" id="baD-Um-3r2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QdM-Fe-haQ" secondAttribute="trailing" id="g5r-Y2-MdD"/>
+                            <constraint firstItem="QdM-Fe-haQ" firstAttribute="leading" secondItem="Us6-sm-xsk" secondAttribute="leadingMargin" id="gcf-m2-tKK"/>
+                            <constraint firstItem="avy-II-D1v" firstAttribute="leading" secondItem="Us6-sm-xsk" secondAttribute="leadingMargin" id="js5-7a-9Za"/>
+                            <constraint firstItem="osl-WE-eA8" firstAttribute="top" secondItem="HkS-qG-25P" secondAttribute="bottom" constant="10" id="l4H-AM-3O8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="avy-II-D1v" secondAttribute="trailing" id="liM-gg-57K"/>
+                            <constraint firstItem="osl-WE-eA8" firstAttribute="leading" secondItem="Us6-sm-xsk" secondAttribute="leadingMargin" id="vMb-o3-eVE"/>
+                            <constraint firstItem="R25-P4-gX2" firstAttribute="leading" secondItem="Us6-sm-xsk" secondAttribute="leadingMargin" id="vQQ-qU-ydI"/>
+                            <constraint firstItem="avy-II-D1v" firstAttribute="top" secondItem="R25-P4-gX2" secondAttribute="bottom" constant="10" id="vj2-0e-veC"/>
+                            <constraint firstItem="HkS-qG-25P" firstAttribute="top" secondItem="dO1-os-Ac8" secondAttribute="bottom" constant="10" id="xzX-xB-Wyy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="osl-WE-eA8" secondAttribute="trailing" id="z2A-ZY-igk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentsTextView" destination="avy-II-D1v" id="Xz2-3f-xC3"/>
+                        <outlet property="datePicker" destination="QdM-Fe-haQ" id="Sgo-4H-Vkb"/>
+                        <outlet property="titleTextField" destination="osl-WE-eA8" id="8XI-Xm-Abh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wBg-Qr-m2g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1890.4000000000001" y="121.88905547226388"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vBO-Bt-nmJ">
@@ -90,4 +173,7 @@
             <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="SH2-vk-Or5"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -28,10 +28,11 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
 }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-
-      return cell
+       return cell
 }
    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+     performSegue(withIdentifier: "cellSegue",sender: nil)
+    
 }
  func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath)-> UITableViewCellEditingStyle {
 
