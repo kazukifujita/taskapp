@@ -32,7 +32,7 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
       return taskArray.count
 }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPathas as IndexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath as IndexPath)
         
         let task = taskArray[indexPath.row]
         cell.textLabel?.text = task.title
@@ -59,7 +59,9 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
                 self.realm.delete(self.taskArray[indexPath.row])
                 tableView.deleteRows(at: [indexPath as IndexPath], with: UITableViewRowAnimation.fade)
             }
-            override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        }
+    }
+           override func prepare(for segue: UIStoryboardSegue, sender: Any?){
                  let inputViewController:InputViewController = segue.destination as! InputViewController
                 
                  if segue.identifier == "cellSegue" {
@@ -74,6 +76,10 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
                     }
                      inputViewController.task = task
                 }
-             }
-}
-}
+    }
+             override func viewWillAppear(_ animated: Bool) {
+                     super.viewWillAppear(animated)
+                    tableView.reloadData()
+                }
+            }
+    
