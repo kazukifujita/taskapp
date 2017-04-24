@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A395EA601EADE20D00CED576 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = A395EA5F1EADE20D00CED576 /* Task.swift */; };
 		A39CCE311EA7F81D00059F72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39CCE301EA7F81D00059F72 /* AppDelegate.swift */; };
 		A39CCE331EA7F81D00059F72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39CCE321EA7F81D00059F72 /* ViewController.swift */; };
 		A39CCE361EA7F81D00059F72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A39CCE341EA7F81D00059F72 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		28E56C09DDF9A2F5B6988874 /* Pods-taskapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-taskapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-taskapp/Pods-taskapp.debug.xcconfig"; sourceTree = "<group>"; };
 		489CCC0D18C0534E6118FE74 /* Pods_taskapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_taskapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A395EA5F1EADE20D00CED576 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		A39CCE2D1EA7F81C00059F72 /* taskapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = taskapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A39CCE301EA7F81D00059F72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A39CCE321EA7F81D00059F72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 		A39CCE2F1EA7F81C00059F72 /* taskapp */ = {
 			isa = PBXGroup;
 			children = (
+				A395EA5F1EADE20D00CED576 /* Task.swift */,
 				A3C070791EAD1CD90001CD57 /* InputViewController.swift */,
 				A39CCE301EA7F81D00059F72 /* AppDelegate.swift */,
 				A39CCE321EA7F81D00059F72 /* ViewController.swift */,
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A395EA601EADE20D00CED576 /* Task.swift in Sources */,
 				A3C0707A1EAD1CD90001CD57 /* InputViewController.swift in Sources */,
 				A39CCE331EA7F81D00059F72 /* ViewController.swift in Sources */,
 				A39CCE311EA7F81D00059F72 /* AppDelegate.swift in Sources */,
