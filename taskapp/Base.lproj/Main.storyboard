@@ -30,18 +30,18 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JWG-df-wfZ" id="Qf6-yT-WTP">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BQw-PN-BeK">
-                                                    <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
+                                                    <rect key="frame" x="15" y="4" width="34" height="21"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xTI-5x-n6b">
-                                                    <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
+                                                    <rect key="frame" x="15" y="25" width="44" height="15"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -126,9 +126,23 @@
                                     <!--2017-04-23 17:46:06 +0000-->
                                 </date>
                             </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="カテゴリー" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QxN-v6-JBo">
+                                <rect key="frame" x="16" y="436" width="87" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AJx-oO-Uwi">
+                                <rect key="frame" x="54" y="465" width="266" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="QxN-v6-JBo" firstAttribute="top" secondItem="QdM-Fe-haQ" secondAttribute="bottom" constant="10" id="3kP-ed-YiZ"/>
                             <constraint firstItem="QdM-Fe-haQ" firstAttribute="top" secondItem="avy-II-D1v" secondAttribute="bottom" constant="10" id="EWq-t3-IPn"/>
                             <constraint firstItem="R25-P4-gX2" firstAttribute="top" secondItem="osl-WE-eA8" secondAttribute="bottom" constant="10" id="GPN-om-iIc"/>
                             <constraint firstItem="HkS-qG-25P" firstAttribute="leading" secondItem="Us6-sm-xsk" secondAttribute="leadingMargin" id="baD-Um-3r2"/>
@@ -137,6 +151,7 @@
                             <constraint firstItem="avy-II-D1v" firstAttribute="leading" secondItem="Us6-sm-xsk" secondAttribute="leadingMargin" id="js5-7a-9Za"/>
                             <constraint firstItem="osl-WE-eA8" firstAttribute="top" secondItem="HkS-qG-25P" secondAttribute="bottom" constant="10" id="l4H-AM-3O8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="avy-II-D1v" secondAttribute="trailing" id="liM-gg-57K"/>
+                            <constraint firstItem="QxN-v6-JBo" firstAttribute="leading" secondItem="Us6-sm-xsk" secondAttribute="leadingMargin" id="rfG-vV-1q0"/>
                             <constraint firstItem="osl-WE-eA8" firstAttribute="leading" secondItem="Us6-sm-xsk" secondAttribute="leadingMargin" id="vMb-o3-eVE"/>
                             <constraint firstItem="R25-P4-gX2" firstAttribute="leading" secondItem="Us6-sm-xsk" secondAttribute="leadingMargin" id="vQQ-qU-ydI"/>
                             <constraint firstItem="avy-II-D1v" firstAttribute="top" secondItem="R25-P4-gX2" secondAttribute="bottom" constant="10" id="vj2-0e-veC"/>
@@ -145,6 +160,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="category" destination="AJx-oO-Uwi" id="v13-tl-r3J"/>
                         <outlet property="contentsTextView" destination="avy-II-D1v" id="Xz2-3f-xC3"/>
                         <outlet property="datePicker" destination="QdM-Fe-haQ" id="Sgo-4H-Vkb"/>
                         <outlet property="titleTextField" destination="osl-WE-eA8" id="8XI-Xm-Abh"/>
